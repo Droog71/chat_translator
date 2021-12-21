@@ -1,0 +1,1 @@
+A mod that uses LibreTranslate to translate chat messages in Minetest.
