@@ -17,6 +17,7 @@ messages sent on your server. The language in which each player receives message
 determined by the language selected in the Minetest settings menu.
 
 <img src="https://i.imgur.com/qlRfMM9.png" alt="Chat Translator" width="600" height="338"></br>
-The player in the upper right corner sent a message in English. On the upper left, the message is translated to Spanish.
-On the lower left, the message is received in German and on the bottom right, the message is displayed in French.
+The player in the upper right corner sent a message in English. On the upper left, 
+the message is translated to Spanish. On the lower left, the message is received 
+in German and on the bottom right, the message is displayed in French.
 </pre>
