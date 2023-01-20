@@ -144,25 +144,23 @@ function send_to_all(message, sender_name, sender_language, emote)
     local suffix = emote and " " or "> "
     for _,player in pairs(minetest.get_connected_players()) do
         local receiver_name = player:get_player_name()
-        if receiver_name ~= sender_name then
-            local receiver_language = minetest.get_player_information(receiver_name).lang_code
-            if sender_language == receiver_language then
-                minetest.chat_send_player(receiver_name, prefix .. sender_name .. suffix .. message)
-            else
-                if receiver_language == "" or language_available(receiver_language) == false then 
-                    receiver_language = "en"
-                end
-                local params = {
-                    message = message,
-                    sender_name = sender_name,
-                    receiver_name = receiver_name,
-                    sender_language = sender_language,
-                    receiver_language = receiver_language,
-                    prefix = prefix,
-                    suffix = suffix
-                }
-                send_message(params)
+        local receiver_language = minetest.get_player_information(receiver_name).lang_code
+        if sender_language == receiver_language then
+            minetest.chat_send_player(receiver_name, prefix .. sender_name .. suffix .. message)
+        else
+            if receiver_language == "" or language_available(receiver_language) == false then 
+                receiver_language = "en"
             end
+            local params = {
+                message = message,
+                sender_name = sender_name,
+                receiver_name = receiver_name,
+                sender_language = sender_language,
+                receiver_language = receiver_language,
+                prefix = prefix,
+                suffix = suffix
+            }
+            send_message(params)
         end
     end
 end
