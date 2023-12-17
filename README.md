@@ -5,12 +5,17 @@ Chat Translator uses <a href="https://github.com/LibreTranslate/LibreTranslate">
 In order to use this mod, LibreTranslate will need to be installed and running on your 
 Minetest server. LibreTranslate can be installed and started with a single command:
 "docker run -ti --rm -p 5000:5000 libretranslate/libretranslate"
+
+Or (works on Debian, this runs for several minutes and (also) installs translation packages): "pipx run libretranslate"
+
 Alternative installation methods can be found here: <a href="https://github.com/LibreTranslate/LibreTranslate/blob/main/README.md#install-and-run">LibreTranslate Installation</a>
 
 In order to run Chat Translator, you will also need to add the mod to your
 trusted mods list. To do so, click on the 'Settings' tab in the main menu. 
 Click the 'All Settings' button and in the search bar, enter 'trusted'. 
 Click the 'Edit' button and add 'chat_translator' to the list.
+
+Or (for Headless Servers) put: secure.trusted_mods = chat_translator (seperate several Mods with (no "") ", " from each other) to Your minetest.conf.
 
 Once everything is installed and running, Chat Translator will attempt to translate all chat 
 messages sent on your server. The language in which each player receives messages is 
